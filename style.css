@@ -1,0 +1,41 @@
+:root { --ink: #101a2b; --paper: #f5f4ef; --acid: #dcff4b; --line: rgba(16, 26, 43, .22); }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Noto Sans KR", sans-serif; }
+main { overflow: hidden; }
+nav { height: 92px; max-width: 1240px; margin: auto; padding: 19px 32px; display: flex; align-items: center; gap: 30px; border-bottom: 1px solid var(--line); }
+.brand { color: var(--ink); font: 500 .78rem/1 "DM Mono", monospace; letter-spacing: -.06em; text-decoration: none; margin-right: auto; }
+.nav-link, .section-label, .eyebrow, .footer-note { font: 500 .72rem/1.2 "DM Mono", monospace; letter-spacing: .04em; }
+.nav-link { color: var(--ink); text-decoration: none; }
+.hero, .about, .work { max-width: 1240px; margin: auto; padding-left: 32px; padding-right: 32px; }
+.hero { min-height: 606px; padding-top: 88px; position: relative; }
+.eyebrow { display: flex; align-items: center; gap: 10px; margin: 0 0 28px; }
+.eyebrow span { width: 8px; height: 8px; background: var(--acid); border-radius: 50%; box-shadow: 0 0 0 4px var(--ink); }
+h1 { margin: 0; max-width: 880px; font-size: clamp(3.2rem, 7.15vw, 6.7rem); line-height: 1.13; letter-spacing: -.09em; font-weight: 800; }
+h1 em { font-style: normal; position: relative; white-space: nowrap; }
+h1 em::after { content: ""; position: absolute; z-index: -1; left: -2%; bottom: 5%; width: 104%; height: 19%; background: var(--acid); transform: rotate(-1.5deg); }
+.hero-bottom { position: absolute; left: 32px; right: 32px; bottom: 42px; display: flex; align-items: end; justify-content: space-between; }
+.hero-bottom p { font-size: 1rem; line-height: 1.75; margin: 0; }
+.round-link { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%; background: var(--ink); color: var(--acid); text-decoration: none; font: 1.5rem "DM Mono"; transition: transform .2s ease; }
+.round-link:hover { transform: translateY(4px); }
+.about { border-top: 1px solid var(--line); display: grid; grid-template-columns: 1fr 3fr; gap: 40px; padding-top: 90px; padding-bottom: 106px; }
+.section-label { margin: 8px 0 0; color: #536073; }
+.about-copy { max-width: 785px; }
+h2 { margin: 0; font-size: clamp(2rem, 4.2vw, 4rem); letter-spacing: -.08em; line-height: 1.27; }
+.about-copy p { max-width: 470px; margin: 39px 0 0; font-size: 1.04rem; line-height: 1.95; word-break: keep-all; }
+.work { background: var(--ink); max-width: none; color: var(--paper); padding-top: 90px; padding-bottom: 110px; }
+.work-head, .focus-list { max-width: 1176px; margin: auto; }
+.work-head { display: flex; justify-content: space-between; align-items: start; margin-bottom: 66px; }
+.work .section-label { color: #aab3c2; }
+.work-head h2 { font-size: clamp(2rem, 3.5vw, 3.5rem); }
+.focus-list { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(245,244,239,.28); }
+.focus-list article { min-height: 280px; padding: 22px 25px 25px 0; border-right: 1px solid rgba(245,244,239,.28); display: flex; flex-direction: column; }
+.focus-list article + article { padding-left: 25px; }
+.focus-list article:last-child { border-right: 0; }
+.focus-list span { font: .72rem "DM Mono"; color: var(--acid); }
+h3 { font: 500 clamp(1.85rem, 3vw, 3rem)/1.06 "DM Mono", monospace; margin: auto 0 18px; letter-spacing: -.07em; }
+.focus-list p { color: #c6cbd5; font-size: .92rem; margin: 0; line-height: 1.65; word-break: keep-all; }
+footer { background: var(--acid); color: var(--ink); min-height: 235px; padding: 43px max(32px, calc((100vw - 1176px) / 2)); display: flex; justify-content: space-between; align-items: end; }
+footer > p:first-child { margin: 0; font-size: clamp(1.55rem, 2.7vw, 2.65rem); font-weight: 800; line-height: 1.05; letter-spacing: -.07em; }
+.footer-note { margin: 0; text-align: right; line-height: 1.6; }
+@media (max-width: 680px) { nav { height: 76px; padding: 14px 20px; gap: 20px; } .hero, .about, .work { padding-left: 20px; padding-right: 20px; } .hero { min-height: 580px; padding-top: 76px; } h1 { font-size: clamp(2.85rem, 14vw, 4.8rem); line-height: 1.18; } .hero-bottom { left: 20px; right: 20px; } .hero-bottom p { font-size: .87rem; } .about { display: block; padding-top: 64px; padding-bottom: 70px; } .about-copy { margin-top: 35px; } .about-copy p { margin-top: 28px; } .work { padding-top: 65px; padding-bottom: 70px; } .work-head { display: block; margin-bottom: 40px; } .work-head h2 { margin-top: 31px; } .focus-list { display: block; } .focus-list article, .focus-list article + article { min-height: 190px; padding: 20px 0; border-right: 0; border-bottom: 1px solid rgba(245,244,239,.28); } footer { min-height: 205px; padding: 31px 20px; display: block; } .footer-note { text-align: left; margin-top: 50px; } }
